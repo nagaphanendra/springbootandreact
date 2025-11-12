@@ -1,8 +1,5 @@
 backendBanking/node_modules/
-backendBanking/build/
-backendBanking/.env
-backendBanking/.DS_Store
-backendBanking/debug.log
+backendBanking/build
 
 banking/target/
 banking/.idea/
