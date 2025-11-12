@@ -1,0 +1,221 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 16px;
+  background: linear-gradient(135deg, #f3f6fb 0%, #e2e7f1 100%);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  color: #1a1f36;
+}
+
+.screen4-container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(15, 31, 64, 0.08);
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-right: 170px;
+ margin-top: 30px;
+}
+
+.screen4-step {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  border-bottom: 3px solid #181616; /* ✅ Horizontal line across entire row */
+  padding-bottom: 16px;
+}
+
+.screen4-buttons {
+  display: flex;
+  justify-content: space-between; /* ✅ Back on left, Next on right */
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #dce2f2; /* optional separator line */
+}
+
+.screen4-back {
+   border: 1px solid #060707;
+  background: #1f3fa1;
+  border-radius: 24px;
+  padding: 8px 18px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.screen4-back:hover {
+  background: #e8ecf6;
+  color: #0f1f40;
+}
+
+.screen4-step-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px 0;
+  text-align: center;
+  flex-grow: 1;
+  margin-right: 50px;
+}
+
+.screen4-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.screen4-form h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f1f40;
+  margin: 0 0 12px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #dce2f2;
+}
+
+.screen4-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #4f5873;
+}
+
+.screen4-choice-group {
+  display: flex;
+  gap: 20px;
+}
+
+.screen4-radio {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1f36;
+}
+
+.screen4-radio input {
+  accent-color: #324dbb;
+}
+
+.screen4-auto {
+  border: 1px solid #dce2f2;
+  border-radius: 12px;
+  padding: 20px 24px;
+  background: linear-gradient(120deg, #f7f9fe 0%, #eef2fb 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.screen4-auto-header {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #324dbb;
+}
+
+.screen4-select-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3a4260;
+}
+
+.screen4-select {
+  border: 1px solid #c8d2eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  background: #ffffff;
+  color: #1a1f36;
+}
+
+.screen4-select:focus {
+  outline: 2px solid rgba(50, 77, 187, 0.3);
+  outline-offset: 1px;
+}
+
+.screen4-note {
+  font-size: 12px;
+  color: #5c6482;
+  margin: 0;
+}
+
+.screen4-active {
+  min-height: 120px;
+  border: 1px dashed #dce1ef;
+  border-radius: 12px;
+  background: #fdfcff;
+}
+
+.screen4-next {
+  padding: 12px 24px;
+  background: #1f3fa1;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.screen4-next:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(24, 56, 152, 0.22);
+}
+
+@media (max-width: 640px) {
+  .screen4-container {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .screen4-choice-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .screen4-next {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.screen4-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Style the scrollbar */
+.screen4-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.screen4-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.screen4-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.screen4-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

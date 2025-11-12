@@ -1,0 +1,138 @@
+/* -------------------------------------------------
+   PREVENT SCROLLBAR & KEEP CONTENT INSIDE CONTAINER
+   ------------------------------------------------- */
+html, body {
+  height: 100%;
+  overflow: hidden;                 /* <-- NEW: no page scroll */
+}
+
+body {
+  background-color: #f4f8fc;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* -------------------------------------------------
+   MAIN WRAPPER – 100% viewport height, scrollable only
+   inside the form area (optional, but nice)
+   ------------------------------------------------- */
+.nominee-page {
+  width: 100%;
+  height: 100vh;                    /* <-- NEW: full height */
+  overflow: hidden;                 /* <-- NEW */
+  display: flex;
+  justify-content: center;
+}
+
+/* -------------------------------------------------
+   FORM CONTAINER – scrollable internally if needed
+   ------------------------------------------------- */
+/* .nominee-container {
+  width: 70%;
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #fbfdff;
+  border: 2px solid #b3e0ff;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(16,24,40,.06);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  max-height: calc(100vh - 80px);   
+  overflow-y: auto;                 
+  overflow-x: hidden;
+} */
+
+/* -------------------------------------------------
+   ALL OTHER STYLES (unchanged)
+   ------------------------------------------------- */
+.form-container h3 { text-align:center; color:#0b4471; margin-bottom:20px; }
+
+.nominee-nav { display:flex; justify-content:flex-start; gap:10px; margin-bottom:15px; }
+.nav-btn { background:#d9edff; border:1px solid #99d0ff; padding:6px 14px; border-radius:6px; cursor:pointer; font-weight:bold; color:#0b69b1; }
+.nav-btn.active { background:#0b69b1; color:#fff; }
+
+.nominee-section { background:#fafdff; border-left:4px solid #0b69b1; padding:20px; border-radius:8px; margin-bottom:15px; }
+.nominee-title { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.nominee-title h4 { margin:0; color:#0b69b1; font-size:16px; }
+.remove-btn { background:#ffe8e8; border:1px solid #ffb3b3; color:#c70000; border-radius:6px; padding:6px 10px; cursor:pointer; }
+
+.form-fields-container { display:grid; grid-template-columns:1fr 1fr; gap:18px 35px; align-items:center; }
+.form-group { display:flex; flex-direction:column; }
+.form-group label { font-weight:600; color:#0b4471; font-size:14px; margin-bottom:5px; }
+.required-star { color:red; }
+
+.form-group input,
+.form-group select { padding:8px 10px; border-radius:6px; border:1px solid #cde6f7; font-size:14px; background:#fff; }
+.form-group input:focus,
+.form-group select:focus { outline:none; border-color:#0b69b1; box-shadow:0 0 3px rgba(11,105,177,.3); }
+
+.share-input-group { display:flex; align-items:center; gap:6px; }
+.share-input-group input { width:100%; padding-right:10px; }
+.percent-symbol { color:#0b4471; font-weight:bold; }
+
+.add-nominee-container { margin-top:10px; text-align:center; }
+.add-nominee-btn { background:none; border:1px dashed #0b69b1; color:#0b69b1; font-weight:600; padding:8px 16px; border-radius:8px; cursor:pointer; }
+.add-nominee-btn:hover { background:#eaf6ff; }
+
+/* ---- FOOTER (inline layout) ---- */
+.footer-sticky { margin-top:20px; border-top:1px solid #d6e8f9; padding-top:15px; }
+.footer-content-inline { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.share-validation-inline { text-align:center; flex:1; min-width:180px; padding:8px 12px; border-radius:8px; background:#f8fafc; }
+.share-validation-inline p { margin:0; font-size:14px; font-weight:500; }
+.share-validation-inline .error-message { color:red; font-size:12px; margin-top:4px; }
+.valid { color:green; }
+.invalid { color:red; }
+
+.back-btn, .next-btn { padding:10px 20px; font-weight:600; border-radius:8px; cursor:pointer; min-width:120px; }
+.back-btn { background:#fff; color:#0b69b1; border:1px solid #0b69b1; }
+.back-btn:hover { background:#eaf4ff; }
+.next-btn { background:#0b69b1; color:#fff; border:none; }
+.next-btn:hover { opacity:.9; }
+
+/* ---- MODALS ---- */
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; z-index:1000; }
+.modal { background:#fff; padding:22px 25px; border-radius:8px; box-shadow:0 8px 30px rgba(3,10,25,.2); max-width:360px; width:90%; text-align:center; }
+.modal p { margin-bottom:15px; font-weight:600; color:#0b4471; }
+.modal-close { background:#0b69b1; color:#fff; border:none; padding:8px 14px; border-radius:6px; cursor:pointer; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width:768px) {
+  .nominee-container { width:90%; padding:15px; max-height:calc(100vh - 60px); }
+  .form-fields-container { grid-template-columns:1fr; gap:15px; }
+  .footer-content-inline { flex-direction:column; gap:12px; }
+  .back-btn, .next-btn { width:100%; }
+  .share-validation-inline { order:-1; width:100%; min-width:auto; }
+}
+
+
+.nominee-page {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Style the scrollbar */
+.nominee-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.nominee-page::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.nominee-page::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.nominee-page::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

@@ -1,0 +1,508 @@
+* {
+  box-sizing: border-box;
+}
+
+.photo-signature-container {
+  padding: 80px 40px;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', sans-serif;
+  width:1000px
+}
+
+.registration-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  margin-left: 3%;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  font-size: 16px;
+  color: #667eea;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateX(-2px);
+}
+
+.back-button:active {
+  transform: translateX(-2px) scale(0.98);
+}
+
+.registration-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin-left: 30%;
+}
+
+.registration-form {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  padding: 45px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.registration-form h2 {
+  margin: 0 0 35px 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+.upload-sections-wrapper {
+  display: flex;
+  gap: -5px;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.form-section.file-upload-section {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-section.file-upload-section:nth-child(1) {
+  flex: 1;
+}
+
+.form-section.file-upload-section:nth-child(2) {
+  flex: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d2d2d;
+  letter-spacing: 0.3px;
+}
+
+.file-input-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-user-select: none;
+  user-select: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  letter-spacing: 0.2px;
+}
+
+.file-upload-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.file-upload-button:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.file-upload-button .icon {
+  margin-right: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.file-info {
+  font-size: 13px;
+  color: #888;
+  margin: 6px 0 0 0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.file-status {
+  font-size: 13px;
+  color: #2ecc71;
+  margin: 8px 0 0 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.error-message {
+  font-size: 13px;
+  color: #e74c3c;
+  margin: 8px 0 0 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 30%;
+}
+
+.checkbox-section {
+  margin-bottom: 35px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-left: 4px solid #667eea;
+  border-radius: 12px;
+  max-width: 600px;
+  animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 12%;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 15px;
+  color: #2d2d2d;
+  -webkit-user-select: none;
+  user-select: none;
+  gap: 12px;
+}
+
+.checkbox-input {
+  margin-top: 3px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  /* Cross-browser custom checkbox fallback instead of accent-color (unsupported in older Safari) */
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #d0d0d0;
+  background: #ffffff;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* checked state styling to mimic accent-color */
+.checkbox-input:checked {
+  border-color: transparent;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.08);
+}
+
+/* visible focus ring */
+.checkbox-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* checkmark */
+.checkbox-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-input:hover {
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.checkbox-text {
+  flex: 1;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  margin-right: 10%;
+  
+}
+
+.form-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 2px solid #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.button-primary,
+.button-secondary {
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  font-family: 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  min-width: 220px;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.button-primary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.button-secondary {
+  background-color: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  min-width: 120px;
+  font-weight: 600;
+}
+
+.button-secondary:hover {
+  background-color: #f8f9ff;
+  border-color: #764ba2;
+  color: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.button-secondary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  color: #28a745;
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.success-modal h2 {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.modal-button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 2rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-button:hover {
+  background: #218838;
+}
+
+@media (max-width: 768px) {
+  .photo-signature-container {
+    padding: 20px 15px;
+  }
+
+  .registration-header {
+    
+    
+    margin-bottom: 10px;
+    padding-right: 28%;
+  }
+
+  .back-button {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .registration-header h1 {
+    font-size: 10px;
+  }
+
+  .registration-form {
+    padding: 30px 20px;
+  }
+
+  .registration-form h2 {
+    font-size: 10px;
+    margin-bottom: 25px;
+  }
+
+  .upload-sections-wrapper {
+    flex-direction: grid;
+    gap: 20px;
+    width: 100%;
+    
+  }
+
+  .form-section.file-upload-section {
+    flex: 1;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .checkbox-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-signature-container {
+    padding: 15px 10px;
+  }
+
+  .registration-form {
+    padding: 20px 15px;
+  }
+
+  .registration-header h1 {
+    font-size: 20px;
+  }
+
+  .registration-form h2 {
+    font-size: 18px;
+  }
+
+  .section-label {
+    font-size: 14px;
+  }
+
+  .file-upload-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+
+/* Add scrollbar to the main container */
+.photo-signature-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Style the scrollbar */
+.photo-signature-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.photo-signature-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.photo-signature-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.photo-signature-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
