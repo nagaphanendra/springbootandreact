@@ -1,0 +1,12 @@
+backendBanking/node_modules/
+backendBanking/build/
+backendBanking/.env
+backendBanking/.DS_Store
+backendBanking/debug.log
+
+banking/target/
+banking/.idea/
+banking/.classpath
+banking/.project
+banking/.settings/
+banking/*.iml
